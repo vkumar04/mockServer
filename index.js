@@ -23,7 +23,6 @@ app.get('/', (_, res) => {
 
 app.get('/:id', (req, res) => {
     const { id } = req.params;
-    console.log("triggered!", id)
     const user = users.filter(x => x.name === id);
     res.send(user)
 })
